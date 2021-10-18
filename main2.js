@@ -56,7 +56,7 @@ const totalCharacters = (arr) => {
   return lengthw;
 };
 
-//CHALLENGE 6
+//CHALLENGE 6  i think its wrong
 const houseSize = (arr) => {
   let sizes = [];
   for (let i = 0; i < arr.length + i; i++) {
@@ -77,9 +77,8 @@ const uniqueDogs = {
 };
 
 const createDog = function (name, dogBreed, furColor) {
-  let newarr = Object.getOwnPropertyNames(uniqueDogs);
-  for (let i = 0; i < newarr.length; i++) {
-    if (newarr[i] == name) {
+  for (const keys in uniqueDogs) {
+    if (keys == name) {
       return "The dog isn't unique enough";
     }
   }
