@@ -38,16 +38,16 @@ const updateNumbers = (obj) => {
 
 //CHALLENGE 4
 const studentOne = {
-    math: { grade: 70, total: 120 },
-    english: { grade: 80, total: 100 },
-    art: { grade: 90, total: 100 }
-  };
-  
-  const studentTwo = {
-    math: { grade: 59, total: 120 },
-    english: { grade: 80, total: 100 },
-    art: { grade: 90, total: 100 }
-  };
+  math: { grade: 70, total: 120 },
+  english: { grade: 80, total: 100 },
+  art: { grade: 90, total: 100 },
+};
+
+const studentTwo = {
+  math: { grade: 59, total: 120 },
+  english: { grade: 80, total: 100 },
+  art: { grade: 90, total: 100 },
+};
 const PassedOrFailed = function (obj) {
   for (const property in obj) {
     if ((obj[property].grade / obj[property].total) * 100 < 50) {
@@ -68,22 +68,28 @@ const PassedOrFailed = function (obj) {
 //another way
 const totalCharacters = (arr) => {
   let newarr = arr.reduce((total, currentValue) => {
-    return total + currentValue.length; 
+    return total + currentValue.length;
   }, 0);
   return newarr;
 };
 
-//CHALLENGE 6  i think its wrong
+//CHALLENGE 6
 const houseSize = (arr) => {
   let sizes = [];
-  for (let i = 0; i < arr.length ; i+=2) {
+  for (let i = 0; i < arr.length; i += 2) {
     let objj = {};
     objj.house = arr[i];
-    objj.members = arr[i+1];
+    objj.members = arr[i + 1];
     sizes.push(objj);
   }
   return sizes;
 };
+//another way
+// for (let i = 0; i < arr.length + i; i++) {
+// let objj = {};
+// objj.house = arr.shift();
+// objj.members = arr.shift();
+// sizes.push(objj);
 
 //7
 const uniqueDogs = {
