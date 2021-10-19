@@ -21,7 +21,6 @@ const courseInfo = {
   ],
   finalExam: true,
 };
-
 const getCourseKeys = (obj) => {
   return Object.getOwnPropertyNames(obj);
   // or return Object.keys(obj);
@@ -38,6 +37,17 @@ const updateNumbers = (obj) => {
 };
 
 //CHALLENGE 4
+const studentOne = {
+    math: { grade: 70, total: 120 },
+    english: { grade: 80, total: 100 },
+    art: { grade: 90, total: 100 }
+  };
+  
+  const studentTwo = {
+    math: { grade: 59, total: 120 },
+    english: { grade: 80, total: 100 },
+    art: { grade: 90, total: 100 }
+  };
 const PassedOrFailed = function (obj) {
   for (const property in obj) {
     if ((obj[property].grade / obj[property].total) * 100 < 50) {
@@ -47,13 +57,20 @@ const PassedOrFailed = function (obj) {
   return "The student have passed";
 };
 
-//CHALLENGE 5 done
+//CHALLENGE 5
+// const totalCharacters = (arr) => {
+//   let lengthw = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     lengthw += arr[i].length;
+//   }
+//   return lengthw;
+// };
+//another way
 const totalCharacters = (arr) => {
-  let lengthw = 0;
-  for (let i = 0; i < arr.length; i++) {
-    lengthw += arr[i].length;
-  }
-  return lengthw;
+  let newarr = arr.reduce((total, currentValue) => {
+    return total + currentValue.length; 
+  }, 0);
+  return newarr;
 };
 
 //CHALLENGE 6  i think its wrong
@@ -75,7 +92,6 @@ const uniqueDogs = {
   lucy: { breed: "Bulldog", color: "white" },
   lucifer: { breed: "Chihuahua", color: "brown" },
 };
-
 const createDog = function (name, dogBreed, furColor) {
   for (const keys in uniqueDogs) {
     if (keys == name) {
