@@ -76,10 +76,10 @@ const totalCharacters = (arr) => {
 //CHALLENGE 6  i think its wrong
 const houseSize = (arr) => {
   let sizes = [];
-  for (let i = 0; i < arr.length + i; i++) {
+  for (let i = 0; i < arr.length ; i+=2) {
     let objj = {};
-    objj.house = arr.shift();
-    objj.members = arr.shift();
+    objj.house = arr[i];
+    objj.members = arr[i+1];
     sizes.push(objj);
   }
   return sizes;
